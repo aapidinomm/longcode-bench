@@ -12,11 +12,15 @@ access.
 
 ## Pinned components
 
+- Python 3.12.14
+- uv 0.12.9
 - Harbor 0.23.0
 - OpenSandbox Python SDK 0.1.14
 - OpenSandbox server 0.2.1
 - OpenSandbox execd 1.0.20
 - OpenSandbox egress 1.1.3
+- Colima 0.10.3
+- Docker CLI 29.6.2
 - Python task image 3.12.7 slim-bookworm, pinned by manifest digest
 
 `uv.lock` pins the full Python dependency graph. `versions.env` records the
@@ -30,6 +34,13 @@ make test
 ```
 
 ## Live OpenSandbox proof
+
+Start a Docker-compatible runtime. The tested local setup is:
+
+```sh
+brew install colima docker
+colima start --cpu 4 --memory 8 --disk 40 --runtime docker
+```
 
 In one terminal, start the loopback-only OpenSandbox server:
 
