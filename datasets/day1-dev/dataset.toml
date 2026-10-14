@@ -1,0 +1,18 @@
+[dataset]
+name = "longcode/day1-dev"
+version = "0.1.0"
+description = "Day 1 OpenSandbox infrastructure proof"
+keywords = [ "coding-agents", "opensandbox", "infrastructure",]
+[[dataset.authors]]
+name = "LongCode benchmark maintainers"
+
+
+[[tasks]]
+name = "longcode/day1-smoke"
+digest = "sha256:2b0828f9064354740beeb5c5c7531522bddb720d58e0c7e3817f7c54e93835fe"
+
+
+[[files]]
+path = "metric.py"
+digest = "sha256:1aefacc3bf31b60119fb8b8d8a1748e37bae2ac51450b3d02a33d04c7d4662c2"
+

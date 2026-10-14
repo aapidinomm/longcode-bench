@@ -1,0 +1,52 @@
+schema_version = "1.4"
+artifacts = [
+    "/app/answer.txt",
+    "/app/agent-egress.json",
+]
+
+[task]
+name = "longcode/day1-smoke"
+version = "0.1.0"
+description = "Infrastructure proof for OpenSandbox egress and verifier isolation"
+authors = [{ name = "LongCode benchmark maintainers" }]
+keywords = ["infrastructure", "opensandbox", "smoke-test"]
+
+[metadata]
+difficulty = "trivial"
+category = "software_engineering"
+tags = ["day1", "egress", "verifier-isolation"]
+expert_time_estimate_min = 1.0
+junior_time_estimate_min = 3.0
+
+[agent]
+timeout_sec = 60.0
+
+[verifier]
+timeout_sec = 60.0
+environment_mode = "separate"
+network_mode = "no-network"
+
+[verifier.environment]
+docker_image = "python:3.12.7-slim-bookworm@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d"
+network_mode = "no-network"
+workdir = "/app"
+os = "linux"
+mcp_servers = []
+
+[verifier.environment.env]
+
+[verifier.env]
+
+[environment]
+docker_image = "python:3.12.7-slim-bookworm@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d"
+network_mode = "allowlist"
+allowed_hosts = ["example.com"]
+workdir = "/app"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]
+
