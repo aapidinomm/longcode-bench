@@ -6,6 +6,7 @@ bootstrap:
 test:
 	uv run python -m unittest discover -s unit_tests -v
 	uv run python scripts/validate_task.py
+	uv run python scripts/validate_candidates.py
 
 server:
 	./scripts/start_opensandbox_server.sh

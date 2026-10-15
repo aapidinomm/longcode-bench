@@ -1,7 +1,7 @@
 # LongCode benchmark
 
-This repository contains the Day 1 infrastructure proof for a public and
-private long-horizon coding benchmark built with Harbor and OpenSandbox.
+This repository contains the infrastructure and task-design work for a public
+and private long-horizon coding benchmark built with Harbor and OpenSandbox.
 
 The proof has one deliberately trivial task. The agent environment uses a
 default-deny hostname allowlist: `example.com` must be reachable and
@@ -84,4 +84,20 @@ cause Harbor to reject `network_mode = "allowlist"` before sandbox creation.
 `AllowlistOpenSandboxEnvironment` adds creation-time FQDN and wildcard-FQDN
 rules. It keeps dynamic policy switching disabled, so the task uses a separate
 verifier environment with its own deny-all policy.
+
+## Day 2 task design
+
+The repository shortlist applies a mandatory-gate and 100-point rubric to two
+open-source repositories in each target language:
+
+- [Repository selection rubric](docs/repository-selection-rubric.md)
+- [Candidate comparison and pilot](docs/day2-candidate-repositories.md)
+- [Machine-readable catalog](candidates/repositories.toml)
+- [Task brief template](docs/task-spec-template.md)
+- [Six task briefs](docs/task-briefs/)
+
+The nominated pilot is `python-click-response-files`: an opt-in, nested
+response-file facility for Click. The next implementation milestone is to
+package its pinned source and dependencies into a no-network Harbor task, then
+build the oracle, hidden verifier, and mutation suite.
 

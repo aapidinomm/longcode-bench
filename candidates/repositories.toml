@@ -1,0 +1,101 @@
+schema_version = "1"
+researched_at = "2026-10-15"
+minimum_score = 75
+pilot = "python-click-response-files"
+
+[pilot_baseline]
+commit = "2247b35ea1c47c727d7a06e51fa280e12a863ff6"
+test_command = "uv run --frozen pytest -q"
+result = "2261 passed, 25 skipped, 1 xfailed"
+duration_sec = 4.00
+verified_at = "2026-10-15"
+
+[[repositories]]
+id = "python-click-response-files"
+language = "python"
+category = "feature"
+upstream = "https://github.com/pallets/click"
+default_branch = "main"
+commit = "2247b35ea1c47c727d7a06e51fa280e12a863ff6"
+license = "BSD-3-Clause"
+source_loc = 12930
+test_loc = 16294
+test_command = "uv run --frozen pytest -q"
+brief = "docs/task-briefs/python-click-response-files.md"
+score = 93
+scores = { hermeticity = 20, verifier_determinism = 19, task_depth = 18, maintainability = 14, novelty = 13, build_speed = 9 }
+
+[[repositories]]
+id = "python-rich-record-snapshots"
+language = "python"
+category = "refactoring"
+upstream = "https://github.com/Textualize/rich"
+default_branch = "main"
+commit = "9d8f9a372cc5916fd4781fec207ced7ddac2f08f"
+license = "MIT"
+source_loc = 38515
+test_loc = 11217
+test_command = "TERM=unknown pytest tests/ -q"
+brief = "docs/task-briefs/python-rich-record-snapshots.md"
+score = 83
+scores = { hermeticity = 18, verifier_determinism = 19, task_depth = 16, maintainability = 12, novelty = 10, build_speed = 8 }
+
+[[repositories]]
+id = "go-cobra-command-tree-diagnostics"
+language = "go"
+category = "feature"
+upstream = "https://github.com/spf13/cobra"
+default_branch = "main"
+commit = "adbc8813901bba65827259daa8e22ff94ec1f30e"
+license = "Apache-2.0"
+source_loc = 6955
+test_loc = 9810
+test_command = "go test ./..."
+brief = "docs/task-briefs/go-cobra-command-tree-diagnostics.md"
+score = 90
+scores = { hermeticity = 20, verifier_determinism = 18, task_depth = 18, maintainability = 14, novelty = 12, build_speed = 8 }
+
+[[repositories]]
+id = "go-toml-positioned-decode-errors"
+language = "go"
+category = "refactoring"
+upstream = "https://github.com/BurntSushi/toml"
+default_branch = "master"
+commit = "d733fc535e4a9f3c454e421a87b90ade5d49bf31"
+license = "MIT"
+source_loc = 6032
+test_loc = 4481
+test_command = "go test -race ./..."
+brief = "docs/task-briefs/go-toml-positioned-decode-errors.md"
+score = 91
+scores = { hermeticity = 20, verifier_determinism = 19, task_depth = 17, maintainability = 15, novelty = 12, build_speed = 8 }
+
+[[repositories]]
+id = "rust-insta-review-plans"
+language = "rust"
+category = "feature"
+upstream = "https://github.com/mitsuhiko/insta"
+default_branch = "master"
+commit = "4b270ba4349f1f7b9d674852fb415d20bd8f205d"
+license = "Apache-2.0"
+source_loc = 16203
+test_loc = 9741
+test_command = "cargo test -p cargo-insta --locked"
+brief = "docs/task-briefs/rust-insta-review-plans.md"
+score = 82
+scores = { hermeticity = 18, verifier_determinism = 17, task_depth = 19, maintainability = 11, novelty = 12, build_speed = 5 }
+
+[[repositories]]
+id = "rust-fd-filter-pipeline"
+language = "rust"
+category = "refactoring"
+upstream = "https://github.com/sharkdp/fd"
+default_branch = "master"
+commit = "14dcd92fb76ca0ebc2e82671a275f67c790d25fc"
+license = "MIT OR Apache-2.0"
+source_loc = 5168
+test_loc = 3499
+test_command = "cargo test --locked"
+brief = "docs/task-briefs/rust-fd-filter-pipeline.md"
+score = 86
+scores = { hermeticity = 19, verifier_determinism = 18, task_depth = 18, maintainability = 13, novelty = 11, build_speed = 7 }
